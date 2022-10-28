@@ -4,7 +4,7 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <RootNamespace>Fathy.Auth</RootNamespace>
+        <RootNamespace>Fathy.Common.Auth</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -12,7 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Fathy.Email\Fathy.Email.csproj" />
+      <ProjectReference Include="..\Email\Email.csproj" />
     </ItemGroup>
 
 </Project>

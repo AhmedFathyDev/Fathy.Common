@@ -4,11 +4,11 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <RootNamespace>Fathy.Startup</RootNamespace>
+        <RootNamespace>Fathy.Common.Email</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+      <ProjectReference Include="..\Startup\Startup.csproj" />
     </ItemGroup>
 
 </Project>

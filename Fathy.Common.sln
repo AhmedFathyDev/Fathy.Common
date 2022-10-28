@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fathy.Auth", "Fathy.Auth\Fathy.Auth.csproj", "{056BB5D5-60D2-428F-A1CD-38E8355E5E91}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth", "Auth\Auth.csproj", "{056BB5D5-60D2-428F-A1CD-38E8355E5E91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fathy.Email", "Fathy.Email\Fathy.Email.csproj", "{08A7AD1B-066E-427F-AE68-5C3C28C0462D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Email", "Email\Email.csproj", "{08A7AD1B-066E-427F-AE68-5C3C28C0462D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fathy.Startup", "Fathy.Startup\Fathy.Startup.csproj", "{99B92A1E-94F1-44EE-971C-A8E6DE6A783E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Startup", "Startup\Startup.csproj", "{99B92A1E-94F1-44EE-971C-A8E6DE6A783E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fathy.Storage", "Fathy.Storage\Fathy.Storage.csproj", "{8EE8D2AF-1D3D-45D5-B99F-7DC4B8AE6139}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storage", "Storage\Storage.csproj", "{8EE8D2AF-1D3D-45D5-B99F-7DC4B8AE6139}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
