@@ -1,4 +1,4 @@
-﻿namespace Fathy.Auth.Admin.Utilities;
+﻿namespace Fathy.Common.Auth.Admin.Utilities;
 
 public static class Roles
 {

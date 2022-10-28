@@ -1,4 +1,4 @@
-﻿namespace Fathy.Startup;
+﻿namespace Fathy.Common.Startup;
 
 public class Response
 {

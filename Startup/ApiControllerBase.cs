@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Fathy.Startup;
+namespace Fathy.Common.Startup;
 
 [ApiController]
 [Route("api/[controller]/[action]")]

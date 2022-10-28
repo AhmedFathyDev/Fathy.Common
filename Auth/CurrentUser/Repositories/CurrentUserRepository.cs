@@ -1,7 +1,7 @@
 ﻿using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
 
-namespace Fathy.Auth.CurrentUser.Repositories;
+namespace Fathy.Common.Auth.CurrentUser.Repositories;
 
 public class CurrentUserRepository : ICurrentUserRepository
 {

@@ -1,13 +1,13 @@
-﻿using Fathy.Auth.Admin.Utilities;
-using Fathy.Auth.CurrentUser.Repositories;
-using Fathy.Auth.User.DTOs;
-using Fathy.Auth.User.Repositories;
-using Fathy.Startup;
+﻿using Fathy.Common.Auth.Admin.Utilities;
+using Fathy.Common.Auth.CurrentUser.Repositories;
+using Fathy.Common.Auth.User.DTOs;
+using Fathy.Common.Auth.User.Repositories;
+using Fathy.Common.Startup;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Fathy.Auth.User.Controllers;
+namespace Fathy.Common.Auth.User.Controllers;
 
 public class UserController : ApiControllerBase
 {

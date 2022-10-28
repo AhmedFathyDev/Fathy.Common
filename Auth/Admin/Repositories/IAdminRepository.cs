@@ -1,6 +1,6 @@
-﻿using Fathy.Startup;
+﻿using Fathy.Common.Startup;
 
-namespace Fathy.Auth.Admin.Repositories;
+namespace Fathy.Common.Auth.Admin.Repositories;
 
 public interface IAdminRepository
 {

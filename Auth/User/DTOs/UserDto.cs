@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Fathy.Auth.User.DTOs;
+namespace Fathy.Common.Auth.User.DTOs;
 
 public class UserDto
 {

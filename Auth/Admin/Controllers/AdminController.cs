@@ -1,11 +1,11 @@
-﻿using Fathy.Auth.Admin.Repositories;
-using Fathy.Auth.Admin.Utilities;
-using Fathy.Startup;
+﻿using Fathy.Common.Auth.Admin.Repositories;
+using Fathy.Common.Auth.Admin.Utilities;
+using Fathy.Common.Startup;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Fathy.Auth.Admin.Controllers;
+namespace Fathy.Common.Auth.Admin.Controllers;
 
 [Authorize(Roles = Roles.Admin)]
 public class AdminController : ApiControllerBase

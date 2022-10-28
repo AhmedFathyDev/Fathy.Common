@@ -1,12 +1,12 @@
 ﻿using System.Web;
-using Fathy.Auth.JWTGenerator.Repositories;
-using Fathy.Auth.User.DTOs;
-using Fathy.Email;
-using Fathy.Startup;
+using Fathy.Common.Auth.JWTGenerator.Repositories;
+using Fathy.Common.Auth.User.DTOs;
+using Fathy.Common.Email;
+using Fathy.Common.Startup;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 
-namespace Fathy.Auth.User.Repositories;
+namespace Fathy.Common.Auth.User.Repositories;
 
 public class UserRepository : IUserRepository
 {

@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Fathy.Startup;
+namespace Fathy.Common.Startup;
 
 public class Error
 {

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace Fathy.Startup;
+namespace Fathy.Common.Startup;
 
 public class SwaggerOperationFilter : IOperationFilter
 {

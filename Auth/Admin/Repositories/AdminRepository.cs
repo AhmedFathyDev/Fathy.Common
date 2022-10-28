@@ -1,7 +1,7 @@
-﻿using Fathy.Startup;
+﻿using Fathy.Common.Startup;
 using Microsoft.AspNetCore.Identity;
 
-namespace Fathy.Auth.Admin.Repositories;
+namespace Fathy.Common.Auth.Admin.Repositories;
 
 public class AdminRepository : IAdminRepository
 {

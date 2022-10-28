@@ -1,4 +1,4 @@
-namespace Fathy.Email;
+namespace Fathy.Common.Email;
 
 public class Message
 {

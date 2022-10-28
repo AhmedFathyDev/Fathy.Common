@@ -1,8 +1,8 @@
-﻿using Fathy.Startup;
+﻿using Fathy.Common.Startup;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 
-namespace Fathy.Email;
+namespace Fathy.Common.Email;
 
 public static class DependencyInjection
 {

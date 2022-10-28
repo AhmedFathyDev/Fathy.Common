@@ -2,7 +2,7 @@ using Azure.Core.Pipeline;
 using Azure.Storage.Blobs;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Fathy.Storage;
+namespace Fathy.Common.Storage;
 
 public static class DependencyInjection
 {

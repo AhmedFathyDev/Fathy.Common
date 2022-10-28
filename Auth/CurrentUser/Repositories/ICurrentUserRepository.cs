@@ -1,4 +1,4 @@
-﻿namespace Fathy.Auth.CurrentUser.Repositories;
+﻿namespace Fathy.Common.Auth.CurrentUser.Repositories;
 
 public interface ICurrentUserRepository
 {

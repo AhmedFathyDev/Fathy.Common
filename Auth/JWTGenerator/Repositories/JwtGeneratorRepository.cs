@@ -1,11 +1,11 @@
 ﻿using System.Globalization;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-using Fathy.Auth.JWTGenerator.Utilities;
+using Fathy.Common.Auth.JWTGenerator.Utilities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Fathy.Auth.JWTGenerator.Repositories;
+namespace Fathy.Common.Auth.JWTGenerator.Repositories;
 
 public class JwtGeneratorRepository : IJwtGeneratorRepository
 {

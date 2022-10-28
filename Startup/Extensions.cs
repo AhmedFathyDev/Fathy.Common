@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-namespace Fathy.Startup;
+namespace Fathy.Common.Startup;
 
 public static class Extensions
 {

@@ -1,7 +1,7 @@
-﻿using Fathy.Startup;
+﻿using Fathy.Common.Startup;
 using Microsoft.AspNetCore.Identity;
 
-namespace Fathy.Auth;
+namespace Fathy.Common.Auth;
 
 public static class Extensions
 {

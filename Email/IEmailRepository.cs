@@ -1,6 +1,6 @@
-﻿using Fathy.Startup;
+﻿using Fathy.Common.Startup;
 
-namespace Fathy.Email;
+namespace Fathy.Common.Email;
 
 public interface IEmailRepository
 {

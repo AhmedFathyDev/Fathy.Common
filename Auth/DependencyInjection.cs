@@ -1,16 +1,15 @@
-using System.Net.Mail;
-using Fathy.Auth.Admin.Repositories;
-using Fathy.Auth.CurrentUser.Repositories;
-using Fathy.Auth.JWTGenerator.Repositories;
-using Fathy.Auth.JWTGenerator.Utilities;
-using Fathy.Auth.User.Repositories;
-using Fathy.Email;
+using Fathy.Common.Auth.Admin.Repositories;
+using Fathy.Common.Auth.CurrentUser.Repositories;
+using Fathy.Common.Auth.JWTGenerator.Repositories;
+using Fathy.Common.Auth.JWTGenerator.Utilities;
+using Fathy.Common.Auth.User.Repositories;
+using Fathy.Common.Email;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
-namespace Fathy.Auth;
+namespace Fathy.Common.Auth;
 
 public static class DependencyInjection
 {

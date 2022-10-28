@@ -1,7 +1,7 @@
-﻿using Fathy.Auth.User.DTOs;
-using Fathy.Startup;
+﻿using Fathy.Common.Auth.User.DTOs;
+using Fathy.Common.Startup;
 
-namespace Fathy.Auth.User.Repositories;
+namespace Fathy.Common.Auth.User.Repositories;
 
 public interface IUserRepository
 {

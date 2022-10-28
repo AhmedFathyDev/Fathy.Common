@@ -1,7 +1,7 @@
-using Fathy.Startup;
+using Fathy.Common.Startup;
 using Microsoft.AspNetCore.Http;
 
-namespace Fathy.Auth;
+namespace Fathy.Common.Auth;
 
 public static class ErrorsList
 {

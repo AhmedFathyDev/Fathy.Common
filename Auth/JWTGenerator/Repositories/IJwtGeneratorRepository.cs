@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace Fathy.Auth.JWTGenerator.Repositories;
+namespace Fathy.Common.Auth.JWTGenerator.Repositories;
 
 public interface IJwtGeneratorRepository
 {

@@ -1,9 +1,9 @@
 ﻿using System.Net;
 using System.Net.Mail;
-using Fathy.Startup;
+using Fathy.Common.Startup;
 using Microsoft.Extensions.Configuration;
 
-namespace Fathy.Email;
+namespace Fathy.Common.Email;
 
 public class EmailRepository : IEmailRepository
 {

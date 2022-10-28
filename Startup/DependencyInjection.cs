@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 
-namespace Fathy.Startup;
+namespace Fathy.Common.Startup;
 
 public static class DependencyInjection
 {

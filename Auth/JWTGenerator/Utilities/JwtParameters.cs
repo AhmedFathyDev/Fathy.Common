@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Fathy.Auth.JWTGenerator.Utilities;
+namespace Fathy.Common.Auth.JWTGenerator.Utilities;
 
 public static class JwtParameters
 {
