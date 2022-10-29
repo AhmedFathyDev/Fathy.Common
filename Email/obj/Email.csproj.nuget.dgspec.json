@@ -1,0 +1,122 @@
+{
+  "format": 1,
+  "restore": {
+    "/mnt/Disk/Workspace/GitHub/Fathy.Common/Email/Email.csproj": {}
+  },
+  "projects": {
+    "/mnt/Disk/Workspace/GitHub/Fathy.Common/Email/Email.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/mnt/Disk/Workspace/GitHub/Fathy.Common/Email/Email.csproj",
+        "projectName": "Email",
+        "projectPath": "/mnt/Disk/Workspace/GitHub/Fathy.Common/Email/Email.csproj",
+        "packagesPath": "/home/ahmedfathydev/.nuget/packages/",
+        "outputPath": "/mnt/Disk/Workspace/GitHub/Fathy.Common/Email/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ahmedfathydev/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/mnt/Disk/Workspace/GitHub/Fathy.Common/Startup/Startup.csproj": {
+                "projectPath": "/mnt/Disk/Workspace/GitHub/Fathy.Common/Startup/Startup.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.110/sdk/6.0.110/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/mnt/Disk/Workspace/GitHub/Fathy.Common/Startup/Startup.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/mnt/Disk/Workspace/GitHub/Fathy.Common/Startup/Startup.csproj",
+        "projectName": "Startup",
+        "projectPath": "/mnt/Disk/Workspace/GitHub/Fathy.Common/Startup/Startup.csproj",
+        "packagesPath": "/home/ahmedfathydev/.nuget/packages/",
+        "outputPath": "/mnt/Disk/Workspace/GitHub/Fathy.Common/Startup/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/ahmedfathydev/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/dotnet6-6.0.110/sdk/6.0.110/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

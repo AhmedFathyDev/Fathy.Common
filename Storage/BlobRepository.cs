@@ -33,7 +33,7 @@ public class BlobRepository : IBlobRepository
     public async Task<BlobDownloadInfo?> DownloadBlobAsync(string blobName)
     {
         var blobClient = _blobServiceClient.GetBlobContainerClient(_blobContainerName).GetBlobClient(blobName);
-        return !(await blobClient.ExistsAsync()).Value ? null : (await blobClient.DownloadAsync()).Value;
+        return (await blobClient.ExistsAsync()).Value ? (await blobClient.DownloadAsync()).Value : null;
     }
 
     public async Task<bool> DeleteBlobAsync(string blobName)
