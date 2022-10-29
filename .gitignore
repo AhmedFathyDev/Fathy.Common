@@ -1,14 +1,14 @@
 
 /.idea/
 ﻿
-/Fathy.Auth/bin/
-/Fathy.Auth/obj/
+/Auth/bin/
+/Auth/obj/
 
-/Fathy.Email/bin/
-/Fathy.Email/obj/
+/Email/bin/
+/Email/obj/
 
-/Fathy.Startup/bin/
-/Fathy.Startup/obj/
+/Startup/bin/
+/Startup/obj/
 
-/Fathy.Storage/bin/
-/Fathy.Storage/obj/
+/Storage/bin/
+/Storage/obj/

@@ -17,7 +17,7 @@ public class AdminController : ApiControllerBase
         _adminRepository = adminRepository;
     }
 
-    [HttpGet]
+    [HttpPost]
     [ProducesResponseType(typeof(Response), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(IEnumerable<Error>), StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> CreateAdminRole() =>
