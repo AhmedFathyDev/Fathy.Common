@@ -1,5 +1,4 @@
-﻿using Fathy.Common.Auth.Admin.Utilities;
-using Fathy.Common.Auth.CurrentUser.Repositories;
+﻿using Fathy.Common.Auth.CurrentUser.Repositories;
 using Fathy.Common.Auth.User.DTOs;
 using Fathy.Common.Auth.User.Repositories;
 using Fathy.Common.Startup;
@@ -20,7 +19,6 @@ public class UserController : ApiControllerBase
         _currentUserRepository = currentUserRepository;
     }
 
-    [Authorize(Roles = Roles.Admin)]
     [HttpPost]
     [ProducesResponseType(typeof(Response), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(IEnumerable<Error>), StatusCodes.Status400BadRequest)]
