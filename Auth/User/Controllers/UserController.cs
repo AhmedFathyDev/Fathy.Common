@@ -19,19 +19,6 @@ public class UserController : ApiControllerBase
         _currentUserRepository = currentUserRepository;
     }
 
-    [HttpPost]
-    [ProducesResponseType(typeof(Response), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(IEnumerable<Error>), StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> Create([FromBody] UserDto userDto) =>
-        ResponseToIActionResult(await _userRepository.CreateAsync(userDto));
-
-    [HttpPost]
-    [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(IEnumerable<Error>), StatusCodes.Status404NotFound)]
-    [ProducesResponseType(typeof(IEnumerable<Error>), StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> SignIn([FromBody] UserDto userDto) =>
-        ResponseToIActionResult(await _userRepository.SignInAsync(userDto));
-
     [HttpGet]
     [ProducesResponseType(typeof(Response), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(IEnumerable<Error>), StatusCodes.Status404NotFound)]
@@ -39,12 +26,11 @@ public class UserController : ApiControllerBase
     public async Task<IActionResult> ConfirmEmail([FromQuery] string userEmail, [FromQuery] string token) =>
         ResponseToIActionResult(await _userRepository.ConfirmEmailAsync(userEmail, token));
 
-    [HttpGet]
+    [HttpPost]
     [ProducesResponseType(typeof(Response), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(IEnumerable<Error>), StatusCodes.Status404NotFound)]
     [ProducesResponseType(typeof(IEnumerable<Error>), StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> ResendConfirmationEmail([FromQuery] string userEmail) =>
-        ResponseToIActionResult(await _userRepository.SendConfirmationEmailAsync(userEmail));
+    public async Task<IActionResult> Create([FromBody] UserDto userDto) =>
+        ResponseToIActionResult(await _userRepository.CreateAsync(userDto));
 
     [Authorize]
     [HttpDelete]
@@ -54,4 +40,18 @@ public class UserController : ApiControllerBase
     public async Task<IActionResult> Delete([FromBody] string password) =>
         ResponseToIActionResult(await _userRepository.DeleteAsync(
             new UserDto { Email = _currentUserRepository.UserEmail, Password = password }));
+
+    [HttpGet]
+    [ProducesResponseType(typeof(Response), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(IEnumerable<Error>), StatusCodes.Status404NotFound)]
+    [ProducesResponseType(typeof(IEnumerable<Error>), StatusCodes.Status400BadRequest)]
+    public async Task<IActionResult> ResendConfirmationEmail([FromQuery] string userEmail) =>
+        ResponseToIActionResult(await _userRepository.SendConfirmationEmailAsync(userEmail));
+
+    [HttpPost]
+    [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(IEnumerable<Error>), StatusCodes.Status404NotFound)]
+    [ProducesResponseType(typeof(IEnumerable<Error>), StatusCodes.Status400BadRequest)]
+    public async Task<IActionResult> SignIn([FromBody] UserDto userDto) =>
+        ResponseToIActionResult(await _userRepository.SignInAsync(userDto));
 }

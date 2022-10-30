@@ -14,6 +14,18 @@ public class BlobRepository : IBlobRepository
         _blobContainerName = blobContainerName;
         _blobServiceClient = blobServiceClient;
     }
+
+    public async Task<bool> DeleteBlobAsync(string blobName)
+    {
+        var blobClient = _blobServiceClient.GetBlobContainerClient(_blobContainerName).GetBlobClient(blobName);
+        return await blobClient.DeleteIfExistsAsync();
+    }
+
+    public async Task<BlobDownloadInfo?> DownloadBlobAsync(string blobName)
+    {
+        var blobClient = _blobServiceClient.GetBlobContainerClient(_blobContainerName).GetBlobClient(blobName);
+        return (await blobClient.ExistsAsync()).Value ? (await blobClient.DownloadAsync()).Value : null;
+    }
     
     public async Task<string> UploadBlobAsync(string blobName, IFormFile file)
     {
@@ -28,17 +40,5 @@ public class BlobRepository : IBlobRepository
         return blobContentInfo is not null && !blobContentInfo.GetRawResponse().IsError
             ? blobClient.Uri.AbsoluteUri
             : string.Empty;
-    }
-    
-    public async Task<BlobDownloadInfo?> DownloadBlobAsync(string blobName)
-    {
-        var blobClient = _blobServiceClient.GetBlobContainerClient(_blobContainerName).GetBlobClient(blobName);
-        return (await blobClient.ExistsAsync()).Value ? (await blobClient.DownloadAsync()).Value : null;
-    }
-
-    public async Task<bool> DeleteBlobAsync(string blobName)
-    {
-        var blobClient = _blobServiceClient.GetBlobContainerClient(_blobContainerName).GetBlobClient(blobName);
-        return await blobClient.DeleteIfExistsAsync();
     }
 }

@@ -26,6 +26,14 @@ public class UserRepository : IUserRepository
         _jwtGeneratorRepository = jwtGeneratorRepository;
     }
 
+    public async Task<Response> ConfirmEmailAsync(string userEmail, string token)
+    {
+        var user = await _userManager.FindByEmailAsync(userEmail);
+        return user is null
+            ? ResponseFactory.Fail(ErrorsList.UserEmailNotFound(userEmail))
+            : (await _userManager.ConfirmEmailAsync(user, token)).ToApplicationResponse();
+    }
+
     public async Task<Response> CreateAsync(UserDto userDto)
     {
         var createResult = await _userManager.CreateAsync(
@@ -35,15 +43,15 @@ public class UserRepository : IUserRepository
             : createResult.ToApplicationResponse();
     }
 
-    public async Task<Response<string>> SignInAsync(UserDto userDto)
+    public async Task<Response> DeleteAsync(UserDto userDto)
     {
         var user = await _userManager.FindByEmailAsync(userDto.Email);
-        if (user is null) return ResponseFactory.Fail<string>(ErrorsList.UserEmailNotFound(userDto.Email));
+        if (user is null) return ResponseFactory.Fail(ErrorsList.UserEmailNotFound(userDto.Email));
 
         var passwordSignInResult = await PasswordSignInAsync(user, userDto.Password);
-        return !passwordSignInResult.Succeeded
-            ? ResponseFactory.Fail<string>(passwordSignInResult.Errors)
-            : ResponseFactory.Ok(await _jwtGeneratorRepository.GenerateJwtSecurityToken(user));
+        return passwordSignInResult.Succeeded
+            ? (await _userManager.DeleteAsync(user)).ToApplicationResponse()
+            : passwordSignInResult;
     }
 
     private async Task<Response> PasswordSignInAsync(IdentityUser user, string password)
@@ -81,22 +89,14 @@ public class UserRepository : IUserRepository
         return await _emailRepository.SendAsync(message);
     }
 
-    public async Task<Response> ConfirmEmailAsync(string userEmail, string token)
-    {
-        var user = await _userManager.FindByEmailAsync(userEmail);
-        return user is null
-            ? ResponseFactory.Fail(ErrorsList.UserEmailNotFound(userEmail))
-            : (await _userManager.ConfirmEmailAsync(user, token)).ToApplicationResponse();
-    }
-
-    public async Task<Response> DeleteAsync(UserDto userDto)
+    public async Task<Response<string>> SignInAsync(UserDto userDto)
     {
         var user = await _userManager.FindByEmailAsync(userDto.Email);
-        if (user is null) return ResponseFactory.Fail(ErrorsList.UserEmailNotFound(userDto.Email));
+        if (user is null) return ResponseFactory.Fail<string>(ErrorsList.UserEmailNotFound(userDto.Email));
 
         var passwordSignInResult = await PasswordSignInAsync(user, userDto.Password);
-        return passwordSignInResult.Succeeded
-            ? (await _userManager.DeleteAsync(user)).ToApplicationResponse()
-            : passwordSignInResult;
+        return !passwordSignInResult.Succeeded
+            ? ResponseFactory.Fail<string>(passwordSignInResult.Errors)
+            : ResponseFactory.Ok(await _jwtGeneratorRepository.GenerateJwtSecurityToken(user));
     }
 }

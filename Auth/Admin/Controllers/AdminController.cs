@@ -19,14 +19,14 @@ public class AdminController : ApiControllerBase
 
     [HttpPost]
     [ProducesResponseType(typeof(Response), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(IEnumerable<Error>), StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> CreateAdminRole() =>
-        ResponseToIActionResult(await _adminRepository.CreateRoleAsync(Roles.Admin));
-
-    [HttpPost]
-    [ProducesResponseType(typeof(Response), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(IEnumerable<Error>), StatusCodes.Status404NotFound)]
     [ProducesResponseType(typeof(IEnumerable<Error>), StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> AddToRoleAdmin([FromQuery] string userEmail) =>
         ResponseToIActionResult(await _adminRepository.AddToRoleAsync(userEmail, Roles.Admin));
+
+    [HttpPost]
+    [ProducesResponseType(typeof(Response), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(IEnumerable<Error>), StatusCodes.Status400BadRequest)]
+    public async Task<IActionResult> CreateAdminRole() =>
+        ResponseToIActionResult(await _adminRepository.CreateRoleAsync(Roles.Admin));
 }

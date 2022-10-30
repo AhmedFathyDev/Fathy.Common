@@ -14,9 +14,6 @@ public class AdminRepository : IAdminRepository
         _roleManager = roleManager;
     }
 
-    public async Task<Response> CreateRoleAsync(string role) =>
-        (await _roleManager.CreateAsync(new IdentityRole(role))).ToApplicationResponse();
-
     public async Task<Response> AddToRoleAsync(string userEmail, string role)
     {
         var user = await _userManager.FindByEmailAsync(userEmail);
@@ -24,4 +21,7 @@ public class AdminRepository : IAdminRepository
             ? ResponseFactory.Fail(ErrorsList.UserEmailNotFound(userEmail))
             : (await _userManager.AddToRoleAsync(user, role)).ToApplicationResponse();
     }
+
+    public async Task<Response> CreateRoleAsync(string role) =>
+        (await _roleManager.CreateAsync(new IdentityRole(role))).ToApplicationResponse();
 }
