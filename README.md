@@ -1,1 +1,1 @@
-# Fathy's common used .NET services.
+# Fathy's commonly used .NET services.
